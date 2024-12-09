@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark light">
+
+    <title>Giunta Creative</title>
+
+    <style type="text/css">
+      /* Utiltiies */
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --yellow-900: hsl(50deg, 100%, 75%);
+        --yellow-600: hsl(50deg, 100%, 45%);
+        --yellow-400: hsl(46deg, 100%, 37%);
+        --yellow-200: hsl(42deg, 100%, 27%);
+
+        --gray-900: hsl(0deg, 0%, 90%);
+        --gray-800: hsl(0deg, 0%, 80%);
+        --gray-700: hsl(0deg, 0%, 70%);
+        --gray-600: hsl(0deg, 0%, 60%);
+        --gray-500: hsl(0deg, 0%, 50%);
+        --gray-400: hsl(0deg, 0%, 40%);
+        --gray-300: hsl(0deg, 0%, 30%);
+        --gray-200: hsl(0deg, 0%, 20%);
+        --gray-100: hsl(0deg, 0%, 10%);
+
+        --body-background: light-dark(var(--gray-800), var(--gray-200));
+        --body-color: light-dark(var(--gray-200), var(--gray-800));
+        --link-color: var(--body-color);
+        --link-color-hover: light-dark(var(--gray-500), var(--gray-600));
+        --primary-action: light-dark(var(--yellow-400), var(--yellow-600));
+        --primary-action-hover: light-dark(var(--yellow-200), var(--yellow-900));
+      }
+
+      .text-left { text-align: left; }
+      .text-right { text-align: right; }
+      .text-center { text-align: center; }
+      .max-w-80 { max-width: 80%; }
+      .block-center { margin-inline: auto; }  
+
+      .mt-1\/2 { margin-top: .5rem; }
+      .mt-0 { margin-top: 0; }
+      .mt-1 { margin-top: 1rem; }
+      .mt-2 { margin-top: 2rem; }
+      .mt-3 { margin-top: 3rem; }
+      .mt-4 { margin-top: 4rem; }
+      .mt-5 { margin-top: 5rem; }
+
+      .mb-0 { margin-bottom: 0; }
+      .mb-1 { margin-bottom: 1rem; }
+      .mb-2 { margin-bottom: 2rem; }
+      .mb-3 { margin-bottom: 3rem; }
+      .mb-4 { margin-bottom: 4rem; }
+      .mb-5 { margin-bottom: 5rem; }
+
+      .my-0 { margin-block: 0; }
+      .my-1 { margin-block: 1rem; }
+      .my-2 { margin-block: 2rem; }
+      .my-3 { margin-block: 3rem; }
+      .my-4 { margin-block: 4rem; }
+      .my-5 { margin-block: 5rem; }
+
+      .mx-auto { margin-inline: auto; }
+      .mx-0 { margin-inline: 0; }
+      .mx-1 { margin-inline: 1rem; }
+      .mx-2 { margin-inline: 2rem; }
+      .mx-3 { margin-inline: 3rem; }
+      .mx-4 { margin-inline: 4rem; }
+      .mx-5 { margin-inline: 5rem; }
+
+      body {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        font-family: sans-serif;
+        font-weight: 200;
+        background: var(--body-background);
+        color: var(--body-color);
+        margin-block: 3rem;
+        padding: 3rem;
+        max-width: 60ch;
+      }
+
+      a, a:visited {
+        color: var(--link-color);
+        text-decoration: none;
+        border-bottom: 4px solid var(--link-color);
+      }
+
+      a:hover, a:active {
+        color: var(--link-color-hover);
+        border-color: var(--link-color-hover);
+      }
+
+      h1 { font-size: 3rem; }
+      h2 { font-size: 2rem; }
+      h3, h4 { font-size: 1.5rem; }
+      h5, h6 { font-size: 1.2rem; }
+
+      h4, h6 { font-weight: 100; } 
+
+      ul {
+        list-style-type: '...';
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 1rem;
+      }
+
+      .wave {
+        display: block;
+        font-size: 6rem;
+      }
+
+      .mailto {
+        color: var(--primary-action);
+        border-color: var(--primary-action);
+
+        &:hover, &:active {
+          color: var(--primary-action-hover);
+          border-color: light-dark(var(--yellow-200), var(--yellow-900));
+        }
+      }
+    </style>
+  </head>
+  <body class="text-left block-center">
+    <h1>
+      <span class="wave">👋</span>
+      I'm Dave Giunta
+    </h1>
+
+    <h2 class="mb-3">
+      I've spent the past 10 years building the Software Engineering team at <a href="https://www.homechef.com" target="_blank">Home Chef</a>.
+    </h2>
+
+    <section class="mb-3">
+      <p class="text-left">During that time I...</p>
+      <ul class="text-left">
+        <li>Advised the founder as he went from bootcamp grad to starting his business, to building the first pieces of technology himself.</li>
+        <li>Architected and built some of the foundational pieces of technology that allowed us to scale early</li>
+        <li>Grew a team from 3 to 50 engineers with a full complement of tech leads and managers</li>
+        <li>Hired engineers of all levels, from Apprentice to Director</li>
+        <li>Supported the CTO's vision and advised on overall technology strategy</li>
+        <li>Fostered a culture of harmonious, supportive teammates who focus on shipping software, mentoring each other and growing themselves</li>
+      </ul>
+    </section>
+
+    <p>I've learned a ton over these past 10 years about building a successful, profitable company with a happy engineering team.</p>
+    <h3>If you think my experience might be useful to you or your business, <noscript>email dave (at) giuntacreative dot com</noscript><a class="mailto" href="">get in touch</a> to setup a call.</h3>
+
+    <script>
+      document.querySelectorAll('.mailto').forEach(link => {
+        link.href = `mailto:${atob("ZGF2ZUBnaXVudGFjcmVhdGl2ZS5jb20=")}`
+      })
+    </script>
+  </body>
+</html>
