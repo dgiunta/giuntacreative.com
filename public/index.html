@@ -128,7 +128,29 @@
           border-color: light-dark(var(--yellow-200), var(--yellow-900));
         }
       }
+
+      .hidden { display: none; }
     </style>
+    <script>
+      customElements.define('mail-to', class MailTo extends HTMLElement {
+        constructor() {
+          super()
+        }
+
+        connectedCallback() {
+          this.replaceChildren(this.render())
+        }
+
+        render() {
+          let link = document.createElement('a')
+          link.classList.add('mailto')
+          link.setAttribute('href', `mailto:${atob(this.getAttribute('link-text'))}`)
+          link.innerText = this.getAttribute('link-text') || 'email'
+
+          return link
+        }
+      })
+    </script>
   </head>
   <body class="text-left block-center">
     <h1>
@@ -153,12 +175,6 @@
     </section>
 
     <p>I've learned a ton over these past 10 years about building a successful, profitable company with a happy engineering team.</p>
-    <h3>If you think my experience might be useful to you or your business, <noscript>email dave (at) giuntacreative dot com</noscript><a class="mailto" href="">get in touch</a> to setup a call.</h3>
-
-    <script>
-      document.querySelectorAll('.mailto').forEach(link => {
-        link.href = `mailto:${atob("ZGF2ZUBnaXVudGFjcmVhdGl2ZS5jb20=")}`
-      })
-    </script>
+    <h3>If you think my experience might be useful to you or your business, <mail-to encrypted-address="ZGF2ZUBnaXVudGFjcmVhdGl2ZS5jb20=" link-text="get in touch"><noscript>email dave (at) giuntacreative dot com</noscript></mail-to> to setup a call.</h3>
   </body>
 </html>
