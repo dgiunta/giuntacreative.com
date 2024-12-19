@@ -144,7 +144,7 @@
         render() {
           let link = document.createElement('a')
           link.classList.add('mailto')
-          link.setAttribute('href', `mailto:${atob(this.getAttribute('link-text'))}`)
+          link.setAttribute('href', `mailto:${atob(this.getAttribute('encrypted-address'))}`)
           link.innerText = this.getAttribute('link-text') || 'email'
 
           return link
